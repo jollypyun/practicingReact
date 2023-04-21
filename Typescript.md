@@ -21,7 +21,7 @@ name = 'manx';
 ```
 - boolean: 논리형. true/false
 ```
-let ㅜ  flag: boolean;
+let flag: boolean;
 flag = true;
 flag = false;
 ```
@@ -70,7 +70,40 @@ maker = 123; // string으로 추론되기에 오류 발생
 ### 유니온
 - 한개 이상의 타입을 지정
 ```
-l
+let course: string | number = "React"
+```
+
+### 타입 별칭
+- 타입의 별칭을 정하는 것이다.
+- 타입을 정의, 값을 정의하는 것이 아니다.
+- 자바스크립트로 컴파일하면 사라진다.
+```
+type Person = {
+    age: number,
+    name: string
+}
+
+let person: Person;
+let people: Person[];
+```
+
+### 함수 타입
+- 함수 타입은 반환값의 타입을 의미한다.
+- 다만 명시의 필요성은 없다. 명시하지 않는 경우 반환값에 대한 타입 추론을 통해 정의한다.
+- 만약 return이 없는 경우에는 void 타입이다.
+```
+function add(a:number, b: number) {
+    return a+b
+}
+
+function printResult(value: any): void {
+    console.log(value);
+}
+```
+
+## Generics
+```
+function insert
 ```
 
 ## 컴파일
